@@ -1,6 +1,6 @@
 ## sELDiG simulation of diversification and dispersal
 
-This model is a modification of the Hurlbert & Stegen model (here)[https://github.com/ahhurlbert/species-energy-simulation].
+This model is a modification of the Hurlbert & Stegen model [here](https://github.com/ahhurlbert/species-energy-simulation) by the sDiv working group sELDiG ("Explaining Latitudinal Diversity Gradients").
 
 
 ## Setup
