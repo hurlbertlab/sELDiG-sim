@@ -1,13 +1,9 @@
-##species-energy-simulation
+## sELDiG simulation of diversification and dispersal
+
+This model is a modification of the Hurlbert & Stegen model (here)[https://github.com/ahhurlbert/species-energy-simulation].
 
 
-Code for conducting eco-evolutionary simulations of diversification and dispersal of species with 
-and without energetic constraints as described in Hurlbert & Stegen, 2014a, "When should species 
-richness be energy limited, and how would we know?" *Ecology Letters*. [DOI: 10.1111/ele.12240](http://onlinelibrary.wiley.com/doi/10.1111/ele.12240/abstract) and in Hurlbert & 
-Stegen, 2014b, "On the processes generating latitudinal richness gradients: identifying diagnostic
-patterns and predictions", *Frontiers in Genetics*. [http://dx.doi.org/10.3389/fgene.2014.00420](http://journal.frontiersin.org/Journal/10.3389/fgene.2014.00420/abstract)
-
-##Setup
+## Setup
 Requirements: R 3.0 or greater with the following packages installed and the following scripts sourced:
 
 ```R
@@ -35,7 +31,7 @@ Cloning the Github repository will set up the following subdirectories:
 * analysis_output: folder in which new analysis output will be stored  
 
 
-##Run simulations
+## Run simulations
 The parameters governing a given simulation are specified within the SENC_Master_Simulation_Matrix.csv
 file. These parameters include:
 
@@ -238,7 +234,7 @@ files produced are listed below.
 </table>
 
 
-##Analyze simulation output
+## Analyze simulation output
 To analyze raw simulation output created using 'run_sim', use the 'analyze_sim' function. With this
 function, you can specify whether you want to analyze patterns for the root clade only (i.e., for the
 entire clade of species that diversified over the course of the simulation; root.only = 1) or for all
@@ -323,7 +319,7 @@ analysis output
   </tr>
 </table>
 
-##Notes on running and analyzing simulations on a High Performance Cluster
+## Notes on running and analyzing simulations on a High Performance Cluster
 Clusters differ in their setup, and so adjustments to the code may be required.
 As written, the code assumes that the cluster is configured for Message Passing Interface (MPI),
 which handles the parallelization of the computing.
@@ -345,21 +341,3 @@ Note: The analysis of large phylogenetic trees is memory-intensive. You may need
 
 `$ bsub -M 8 -o out.%J -n 100 -a openmpi mpirun Rscript run_analysis_on_cluster.r 3765 3864 30`
 
-
-##Duplicating manuscript figures from Hurlbert & Stegen 2014a, *Ecology Letters*:
-
-###Figures 2 and 4
-metrics.through.time.r
-
-###Figure 3
-KT_scenarios_corr_plots_plus_sebastes.r
-
-###Figure S1
-lat.grad.time.plot.r
-
-###Figure S2
-metrics.through.time.sigma.variation.r
-
-###Figure S3
-pacific_npp.r  
-sebastes.r
